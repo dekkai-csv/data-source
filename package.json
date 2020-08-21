@@ -1,0 +1,77 @@
+{
+    "name": "@dekkai/data-source",
+    "version": "1.0.0",
+    "description": "Data source wrapper for local and remote files. Works on browsers, node.js and deno.",
+    "main": "build/lib/mod.js",
+    "repository": "https://github.com/dekkai-data/data-source.git",
+    "author": "Dario Segura darionco.dev@gmail.com",
+    "license": "MIT",
+    "type": "module",
+    "files": [
+        "build/",
+        "src/"
+    ],
+    "keywords": [
+        "data",
+        "source",
+        "remote",
+        "local",
+        "browser",
+        "deno",
+        "node"
+    ],
+    "scripts": {
+        "clean": "rimraf build",
+        "build": "run-p build:**",
+        "build:scripts": "rollup --config",
+        "build:types": "tsc --declaration --emitDeclarationOnly --skipLibCheck --outDir ./build/lib",
+        "docs": "typedoc --out ./docs ./src --exclude 'node_modules/**/*' --mode file --includeVersion --stripInternal --skipLibCheck",
+        "watch": "yarn build --watch",
+        "test": "run-s -c build test:prepare test:run test:teardown",
+        "test:prepare": "pm2 start ./spec/env/TestFileServer.mjs",
+        "test:run": "run-s -c test:run:**",
+        "test:run:node": "mocha spec/env/node.suite.js",
+        "test:run:browser": "karma start --single-run --browsers ChromeHeadless karma.conf.cjs",
+        "test:run:deno": "deno run --allow-read spec/env/deno.suite.js",
+        "test:teardown": "pm2 stop ./spec/env/TestFileServer.mjs",
+        "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+        "prepack": "run-s clean test lint",
+        "pre-push": "run-p pre-push:**",
+        "pre-push:lint": "yarn lint",
+        "pre-push:test": "yarn test"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^9.0.0",
+        "@types/node": "^14.0.27",
+        "@typescript-eslint/eslint-plugin": "^3.8.0",
+        "@typescript-eslint/parser": "^3.8.0",
+        "chai": "^4.2.0",
+        "eslint": "^7.6.0",
+        "globby": "^11.0.0",
+        "husky": "^4.2.5",
+        "karma": "^5.1.1",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-mocha": "^2.0.1",
+        "karma-mocha-reporter": "^2.2.5",
+        "mocha": "^8.1.1",
+        "npm-run-all": "^4.1.5",
+        "pm2": "^4.4.0",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.22.1",
+        "rollup-plugin-sourcemaps": "^0.6.2",
+        "rollup-plugin-typescript2": "^0.27.0",
+        "tslib": "^2.0.0",
+        "typedoc": "^0.18.0",
+        "typescript": "^4.0.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-push": "yarn pre-push"
+        }
+    },
+    "dependencies": {
+        "@dekkai/env": "^1.0.1",
+        "@dekkai/event-emitter": "^1.0.2"
+    }
+}
