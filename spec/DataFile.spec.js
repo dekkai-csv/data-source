@@ -44,6 +44,17 @@ function run(env) {
                         const subarray = (await filePackage.buffer).subarray(start, end);
                         chai.expect(uint8).to.eql(subarray);
                     });
+
+                    it('invalidates the file when `close` is called', async function() {
+                        let failed = false;
+                        dataFile.close();
+                        try {
+                            await dataFile.loadData();
+                        } catch (e) {
+                            failed = true;
+                        }
+                        chai.expect(failed).to.equal(true);
+                    });
                 });
             }
         });

@@ -27,11 +27,11 @@ export class LocalDataFileDeno extends LocalDataFile {
     /**
      * Deno's internal file handle representation.
      */
-    private readonly file: Deno.File;
+    private file: Deno.File;
     /**
      * Information about this file.
      */
-    private readonly info: Deno.FileInfo;
+    private info: Deno.FileInfo;
 
     /**
      * @param file - A deno file instance
@@ -48,6 +48,16 @@ export class LocalDataFileDeno extends LocalDataFile {
      */
     get byteLength(): number {
         return this.info.size;
+    }
+
+    /**
+     * Closes the local file handle for the current platform. After this function is called all subsequent operations
+     * on this file, or any other data sources depending on this file, will fail.
+     */
+    public close(): void {
+        Deno.close(this.file.rid);
+        this.file = null;
+        this.info = null;
     }
 
     /**

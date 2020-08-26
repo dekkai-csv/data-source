@@ -34,6 +34,14 @@ export class LocalDataFileBrowser extends LocalDataFile {
     }
 
     /**
+     * Closes the local file handle for the current platform. After this function is called all subsequent operations
+     * on this file, or any other data sources depending on this file, will fail.
+     */
+    public close(): void {
+        this.blob = null;
+    }
+
+    /**
      * Loads the file into an ArrayBuffer. Optionally a `start` and `end` can be specified to load a part of the file.
      * @param start - The offset at which the data will start loading
      * @param end - The offset at which the data will stop loading

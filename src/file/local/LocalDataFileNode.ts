@@ -46,11 +46,11 @@ export class LocalDataFileNode extends LocalDataFile {
     /**
      * Node file handle returned by the `fs.open` function
      */
-    private readonly handle: number;
+    private handle: number;
     /**
      * File stats for the wrapped file, used to obtain the byte length of the file during slicing
      */
-    private readonly stats: FSStats;
+    private stats: FSStats;
 
     /**
      * @param handle - A node file handle
@@ -63,10 +63,22 @@ export class LocalDataFileNode extends LocalDataFile {
     }
 
     /**
-     * The total length,NodeChunkNodeChunkNodeChunk in bytes, of the file this instance represents.
+     * The total length, in bytes, of the file this instance represents.
      */
     get byteLength(): number {
         return this.stats.size;
+    }
+
+    /**
+     * Closes the local file handle for the current platform. After this function is called all subsequent operations
+     * on this file, or any other data sources depending on this file, will fail.
+     */
+    public close(): void {
+        const handle = this.handle;
+        kFsPromise.then(() => gFS.closeSync(handle));
+
+        this.handle = null;
+        this.stats = null;
     }
 
     /**
