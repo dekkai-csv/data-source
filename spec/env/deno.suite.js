@@ -2,6 +2,7 @@ import '../../node_modules/mocha/mocha.js';
 import '../../node_modules/chai/chai.js';
 
 import specDataFile from '../DataFile.spec.js';
+import specDataChunk from '../DataChunk.spec.js';
 
 // setup mocha
 mocha.setup({ui: 'bdd', reporter: 'spec'});
@@ -54,6 +55,7 @@ const env = {
 
 // register tests
 await specDataFile(env);
+await specDataChunk(env);
 
 // run tests
 mocha.color(true);

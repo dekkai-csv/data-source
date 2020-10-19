@@ -4,6 +4,7 @@ import fs from 'fs';
 import url from 'url';
 
 import specDataFile from '../DataFile.spec.js';
+import specDataChunk from '../DataChunk.spec.js';
 
 function noOpPromise(result) {
     return new Promise(resolve => resolve(result));
@@ -43,3 +44,4 @@ const env = {
 };
 
 specDataFile(env);
+specDataChunk(env);

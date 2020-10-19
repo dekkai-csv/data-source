@@ -1,4 +1,5 @@
 import specDataFile from '../DataFile.spec.js';
+import specDataChunk from '../DataChunk.spec.js';
 
 function getPendingPromise() {
     let resolve;
@@ -63,3 +64,4 @@ const env = {
 };
 
 specDataFile(env);
+specDataChunk(env);
