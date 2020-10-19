@@ -10,7 +10,6 @@ function run(env) {
 
     describe('DataFile', function () {
         describe('LocalDataFile', function() {
-
             const local = filePackage.local;
             for (let i = 0, n = local.length; i < n; ++i) {
                 describe(`From ${local[i].type}`, function() {

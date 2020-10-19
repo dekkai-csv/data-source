@@ -1,3 +1,5 @@
+/* global chai */
+
 import specDataFile from '../DataFile.spec.js';
 import specDataChunk from '../DataChunk.spec.js';
 
@@ -29,7 +31,7 @@ function getFilePromises() {
         buffer: bufferPromise.promise,
         blob: blobPromise.promise,
         file: filePromise.promise,
-    }
+    };
 }
 
 function getTestFilePackage() {
@@ -55,7 +57,7 @@ function getTestFilePackage() {
         remote,
         info,
         buffer: promises.buffer.then(buffer => new Uint8Array(buffer)),
-    }
+    };
 }
 
 const env = {

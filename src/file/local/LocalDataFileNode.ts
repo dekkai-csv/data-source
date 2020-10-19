@@ -2,7 +2,7 @@ import {LocalDataFile} from './LocalDataFile';
 import {loadModule} from '@dekkai/env/build/lib/moduleLoader';
 import {isNodeJS} from '@dekkai/env/build/lib/node';
 import {LocalFileSourceNode} from '../types';
-import {Stats as FSStats} from "fs";
+import {Stats as FSStats} from 'fs';
 
 /**
  * Cached [`fs`](https://nodejs.org/api/fs.html) module in node and `null` in every other platform. If this in null in
@@ -27,7 +27,7 @@ export class LocalDataFileNode extends LocalDataFile {
      */
     public static async fromSource(source: LocalFileSourceNode): Promise<LocalDataFileNode> {
         // wait for `fs` to be loaded
-        await  kFsPromise;
+        await kFsPromise;
 
         let handle: number;
 
@@ -88,7 +88,7 @@ export class LocalDataFileNode extends LocalDataFile {
      */
     public async loadData(start: number = 0, end: number = this.byteLength): Promise<ArrayBuffer> {
         // wait for `fs` to be loaded
-        await  kFsPromise;
+        await kFsPromise;
 
         const length = end - start;
         const result = new Uint8Array(length);

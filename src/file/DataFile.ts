@@ -9,7 +9,7 @@ import {
     LocalFileSourceBrowser,
     LocalFileSourceDeno,
     LocalFileSourceNode,
-    RemoteFileSource
+    RemoteFileSource,
 } from './types';
 
 /**
@@ -36,9 +36,4 @@ export abstract class DataFile {
     public static async fromRemoteSource(source: RemoteFileSource): Promise<DataSource> {
         throw 'Not implemented yet!';
     }
-
-    /**
-     * This class is not meant to be instantiated.
-     */
-    private constructor() {};
 }

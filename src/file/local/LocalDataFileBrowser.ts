@@ -58,7 +58,7 @@ export class LocalDataFileBrowser extends LocalDataFile {
     private loadBlob(blob): Promise<ArrayBuffer> {
         return new Promise(resolve => {
             const reader = new FileReader();
-            reader.onload = () => {
+            reader.onload = (): void => {
                 resolve(reader.result as ArrayBuffer);
             };
             reader.readAsArrayBuffer(blob);

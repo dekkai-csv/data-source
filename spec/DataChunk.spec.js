@@ -53,7 +53,7 @@ function run(env) {
 
         describe('DataChunk source', function() {
             it('PENDING');
-        })
+        });
     });
 }
 

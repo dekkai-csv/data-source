@@ -1,7 +1,7 @@
 import {DataChunk} from '../../chunk/DataChunk';
 import {DataSource} from '../../types';
 
-export abstract class RemoteDataFile implements DataSource{
+export abstract class RemoteDataFile implements DataSource {
     /**
      * Fired when data loading progresses. Not fired when data loading finishes.
      * @event

@@ -35,7 +35,7 @@ function getTestFilePackage() {
         remote,
         info,
         buffer: noOpPromise(new Uint8Array(buffer)),
-    }
+    };
 }
 
 const env = {
