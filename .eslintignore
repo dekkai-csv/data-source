@@ -1,4 +1,5 @@
 node_modules
+*.d.ts
 .*
 bamboo
 coverage
@@ -6,6 +7,7 @@ dist
 build
 example
 gulpfile.js
+deno.suite.js
 tests
 *.worker.js
 **/rollup.config.js
