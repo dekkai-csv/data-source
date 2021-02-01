@@ -19,7 +19,8 @@ function getTestFilePackage() {
         {type: 'file handle', source: noOpPromise(fileHandle)},
     ];
 
-    const fileURL = 'http://localhost:8967/file/package.json';
+    const remoteBaseURL = 'http://localhost:8967';
+    const fileURL = `${remoteBaseURL}/file/package.json`;
     const remote = [
         {type: 'string', source: fileURL},
         {type: 'url', source: new URL(fileURL)},
@@ -33,6 +34,7 @@ function getTestFilePackage() {
     return {
         local,
         remote,
+        remoteBaseURL,
         info,
         buffer: noOpPromise(new Uint8Array(buffer)),
     };

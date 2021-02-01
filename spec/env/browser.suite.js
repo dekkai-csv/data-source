@@ -42,7 +42,8 @@ function getTestFilePackage() {
         {type: 'File', source: promises.file},
     ];
 
-    const fileURL = 'http://localhost:8967/file/package.json';
+    const remoteBaseURL = 'http://localhost:9876/file_server';
+    const fileURL = `${remoteBaseURL}/file/package.json`;
     const remote = [
         {type: 'string', source: fileURL},
         {type: 'url', source: new URL(fileURL)},
@@ -54,6 +55,7 @@ function getTestFilePackage() {
 
     return {
         local,
+        remoteBaseURL,
         remote,
         info,
         buffer: promises.buffer.then(buffer => new Uint8Array(buffer)),

@@ -22,6 +22,9 @@ module.exports = function(config) {
                 included: false,
             },
         ],
+        proxies: {
+            '/file_server': 'http://localhost:8967',
+        },
         reporters: ['mocha'],
         port: 9876,  // karma web server port
         colors: true,
@@ -30,5 +33,5 @@ module.exports = function(config) {
         autoWatch: false,
         // singleRun: false, // Karma captures browsers, runs the tests and exits
         concurrency: Infinity,
-    })
+    });
 }

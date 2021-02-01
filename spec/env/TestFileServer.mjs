@@ -14,14 +14,14 @@ function send404(res) {
     res.end();
 }
 
-function sendCSV(file, res) {
-    const filePath = path.resolve(path.dirname(''), `./node_modules/csv-spectrum/csvs/${file}`);
+function sendFile(file, res) {
+    const filePath = path.resolve(path.dirname(''), `./${file}`);
     fs.readFile(filePath, (err, data) => {
         if (err) {
             send404(res);
         } else {
             res.writeHead(200, {
-                'Content-Type': 'text/csv',
+                'Content-Type': 'text/plain',
                 'Content-Length': data.length,
             });
             res.write(data);
@@ -85,8 +85,10 @@ async function sendSynthetic(res, size = true, slow = false) {
 function requestHandler(req, res) {
     const components = req.url.split('/');
     if (components.length > 1) {
-        if (components[1] === 'csv') {
-            sendCSV(components[2], res);
+        if (components[1] === 'file') {
+            components.shift();
+            components.shift();
+            sendFile(components.join('/'), res);
         } else if (components[1] === 'synthetic') {
             let size = true;
             let slow = false;
