@@ -5,7 +5,7 @@ export interface DataSource {
     /**
      * The total length, in bytes, of the data source.
      */
-    byteLength: number;
+    byteLength: Promise<number>;
 
     /**
      * Slices the data source and returns a new data source pointing at the data within the specified boundaries.

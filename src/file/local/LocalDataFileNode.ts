@@ -65,8 +65,8 @@ export class LocalDataFileNode extends LocalDataFile {
     /**
      * The total length, in bytes, of the file this instance represents.
      */
-    get byteLength(): number {
-        return this.stats.size;
+    get byteLength(): Promise<number> {
+        return Promise.resolve(this.stats.size);
     }
 
     /**
@@ -86,16 +86,17 @@ export class LocalDataFileNode extends LocalDataFile {
      * @param start - The offset at which the data will start loading
      * @param end - The offset at which the data will stop loading
      */
-    public async loadData(start: number = 0, end: number = this.byteLength): Promise<ArrayBuffer> {
+    public async loadData(start: number = 0, end: number = this.stats.size): Promise<ArrayBuffer> {
         // wait for `fs` to be loaded
         await kFsPromise;
 
-        const length = end - start;
+        const normalizedEnd = Math.min(end, this.stats.size);
+        const length = normalizedEnd - start;
         const result = new Uint8Array(length);
         let loaded = 0;
 
         while (loaded < length) {
-            loaded += await this.loadDataIntoBuffer(result, loaded, start + loaded, end);
+            loaded += await this.loadDataIntoBuffer(result, loaded, start + loaded, normalizedEnd);
         }
 
         return result.buffer;

@@ -46,8 +46,8 @@ export class LocalDataFileDeno extends LocalDataFile {
     /**
      * The total length, in bytes, of the file this instance represents.
      */
-    get byteLength(): number {
-        return this.info.size;
+    get byteLength(): Promise<number> {
+        return Promise.resolve(this.info.size);
     }
 
     /**
@@ -65,13 +65,14 @@ export class LocalDataFileDeno extends LocalDataFile {
      * @param start - The offset at which the data will start loading
      * @param end - The offset at which the data will stop loading
      */
-    public async loadData(start: number = 0, end: number = this.byteLength): Promise<ArrayBuffer> {
-        const length = end - start;
+    public async loadData(start: number = 0, end: number = this.info.size): Promise<ArrayBuffer> {
+        const normalizedEnd = Math.min(end, this.info.size);
+        const length = normalizedEnd - start;
         const result = new Uint8Array(length);
         let loaded = 0;
 
         while (loaded < length) {
-            loaded += await this.loadDataIntoBuffer(result, loaded, start + loaded, end);
+            loaded += await this.loadDataIntoBuffer(result, loaded, start + loaded, normalizedEnd);
         }
 
         return result.buffer;

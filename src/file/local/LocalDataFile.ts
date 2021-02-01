@@ -5,7 +5,7 @@ export abstract class LocalDataFile implements DataSource {
     /**
      * The total length, in bytes, of the file this instance represents.
      */
-    public abstract get byteLength(): number;
+    public abstract get byteLength(): Promise<number>;
 
     /**
      * Loads the file into an ArrayBuffer. Optionally a `start` and `end` can be specified to load a part of the file.

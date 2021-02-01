@@ -1,28 +1,51 @@
 import {DataChunk} from '../../chunk/DataChunk';
 import {DataSource} from '../../types';
+import {EventEmitter} from '@dekkai/event-emitter/build/lib/mod';
 
-export abstract class RemoteDataFile implements DataSource {
+export abstract class RemoteDataFile extends EventEmitter implements DataSource {
     /**
      * Fired when data loading progresses. Not fired when data loading finishes.
      * @event
      */
-    static LOADING_PROGRESS: symbol = Symbol('DataFileEvents::LoadingProgress');
+    public static LOADING_START: symbol = Symbol('DataFileEvents::LoadingStart');
+
+    /**
+     * Fired when data loading progresses. Not fired when data loading finishes.
+     * @event
+     */
+    public static LOADING_PROGRESS: symbol = Symbol('DataFileEvents::LoadingProgress');
 
     /**
      * Fired when the data loading finishes.
      * @event
      */
-    static LOADING_COMPLETE: symbol = Symbol('DataFileEvents::LoadingComplete');
+    public static LOADING_COMPLETE: symbol = Symbol('DataFileEvents::LoadingComplete');
 
     /**
      * The total length, in bytes, of the file this instance represents.
      */
-    public abstract get byteLength(): number;
+    public abstract get byteLength(): Promise<number>;
 
     /**
      * Bytes loaded for this file, useful when parsing streaming files.
      */
     public abstract get bytesLoaded(): number;
+
+    /**
+     * Promise that resolves when this file has finished downloading from the remote server.
+     */
+    public abstract get onLoadingComplete(): Promise<number>;
+
+    /**
+     * Has the file finished downloading from the remote server.
+     */
+    public abstract get isLoadingComplete(): boolean;
+
+    /**
+     * This function must ba called in order to start downloading the file, if this function fail the file cannot be
+     * fetched from the server.
+     */
+    public abstract async startDownloading(): Promise<void>;
 
     /**
      * Loads the file into an ArrayBuffer. Optionally a `start` and `end` can be specified to load a part of the file.

@@ -11,6 +11,9 @@ import {
     LocalFileSourceNode,
     RemoteFileSource,
 } from './types';
+import {RemoteDataFileBrowser} from './remote/RemoteDataFileBrowser';
+import {RemoteDataFileDeno} from './remote/RemoteDataFileDeno';
+import {RemoteDataFileNode} from './remote/RemoteDataFileNode';
 
 /**
  * Base class for data files on all platforms.
@@ -34,6 +37,11 @@ export abstract class DataFile {
      * @param source - The file to wrap
      */
     public static async fromRemoteSource(source: RemoteFileSource): Promise<DataSource> {
-        throw 'Not implemented yet!';
+        if (isNodeJS()) {
+            return RemoteDataFileNode.fromSource(source);
+        } else if (isDeno()) {
+            return RemoteDataFileDeno.fromSource(source);
+        }
+        return RemoteDataFileBrowser.fromSource(source);
     }
 }

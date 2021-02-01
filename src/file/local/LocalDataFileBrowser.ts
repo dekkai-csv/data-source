@@ -29,8 +29,8 @@ export class LocalDataFileBrowser extends LocalDataFile {
     /**
      * The total length, in bytes, of the file this instance represents.
      */
-    get byteLength(): number {
-        return this.blob.size;
+    get byteLength(): Promise<number> {
+        return Promise.resolve(this.blob.size);
     }
 
     /**
@@ -46,8 +46,8 @@ export class LocalDataFileBrowser extends LocalDataFile {
      * @param start - The offset at which the data will start loading
      * @param end - The offset at which the data will stop loading
      */
-    public async loadData(start: number = 0, end: number = this.byteLength): Promise<ArrayBuffer> {
-        const slice = this.blob.slice(start, end);
+    public async loadData(start: number = 0, end: number = this.blob.size): Promise<ArrayBuffer> {
+        const slice = this.blob.slice(start, Math.min(end, this.blob.size));
         return await this.loadBlob(slice);
     }
 

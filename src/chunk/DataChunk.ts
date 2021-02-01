@@ -36,10 +36,10 @@ export class DataChunk implements DataSource {
      * The total byte length this chunk represents.
      *
      * NOTE: This value can change after a chunk is loaded for the first time if the chunk belongs to a remote data
-     * source for which the total size is unknown.
+     * source, if the total size is unknown, the value will be -1.
      */
-    public get byteLength(): number {
-        return this.end - this.start;
+    public get byteLength(): Promise<number> {
+        return Promise.resolve(this.end - this.start);
     }
 
     /**
@@ -74,8 +74,8 @@ export class DataChunk implements DataSource {
             if (this._buffer === null) { // the chunk could not be loaded
                 this.start = 0;
                 this.end = 0;
-            } else if (this.byteLength > this._buffer.byteLength) { // the actual data is smaller than the requested size
-                this.end -= this.byteLength - this._buffer.byteLength;
+            } else if (this.end - this.start > this._buffer.byteLength) { // the actual data is smaller than the requested size
+                this.end -= this.end - this.start - this._buffer.byteLength;
             }
         }
     }
@@ -102,7 +102,7 @@ export class DataChunk implements DataSource {
      * @param start - The offset at which the data will start loading
      * @param end - The offset at which the data will stop loading
      */
-    loadData(start: number = 0, end: number = this.byteLength): Promise<ArrayBuffer> {
+    public loadData(start: number = 0, end: number = (this.end - this.start)): Promise<ArrayBuffer> {
         return this.source.loadData(this.start + start, this.start + end);
     }
 }
