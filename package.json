@@ -25,7 +25,7 @@
         "build": "run-p build:**",
         "build:scripts": "rollup --config",
         "build:types": "tsc --declaration --emitDeclarationOnly --skipLibCheck --outDir ./build/lib",
-        "docs": "typedoc --out ./docs ./src --exclude 'node_modules/**/*' --mode file --includeVersion --stripInternal --skipLibCheck",
+        "docs": "typedoc --out ./docs --entryPoints src/mod.ts --exclude 'node_modules/**/*' --includeVersion --excludeInternal",
         "watch": "yarn build --watch",
         "test": "run-s -c build test:prepare test:run test:teardown",
         "test:prepare": "pm2 start ./spec/env/TestFileServer.mjs",
