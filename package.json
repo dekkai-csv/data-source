@@ -1,6 +1,6 @@
 {
     "name": "@dekkai/data-source",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Data source wrapper for local and remote files. Works on browsers, node.js and deno.",
     "main": "build/lib/mod.js",
     "repository": "https://github.com/dekkai-data/data-source.git",
