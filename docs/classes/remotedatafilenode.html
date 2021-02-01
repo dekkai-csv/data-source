@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RemoteDataFile | @dekkai/data-source - v0.1.0</title>
+	<title>RemoteDataFileNode | @dekkai/data-source - v0.1.0</title>
 	<meta name="description" content="Documentation for @dekkai/data-source - v0.1.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,32 +56,31 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="remotedatafile.html">RemoteDataFile</a>
+					<a href="remotedatafilenode.html">RemoteDataFileNode</a>
 				</li>
 			</ul>
-			<h1>Class RemoteDataFile</h1>
+			<h1>Class RemoteDataFileNode</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Represents a remote data file on node.js.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">EventEmitter</span>
+						<a href="remotedatafile.html" class="tsd-signature-type">RemoteDataFile</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">RemoteDataFile</span>
-								<ul class="tsd-hierarchy">
-									<li>
-										<a href="remotedatafilebrowser.html" class="tsd-signature-type">RemoteDataFileBrowser</a>
-									</li>
-									<li>
-										<a href="remotedatafilenode.html" class="tsd-signature-type">RemoteDataFileNode</a>
-									</li>
-								</ul>
+								<span class="target">RemoteDataFileNode</span>
 							</li>
 						</ul>
 					</li>
@@ -98,44 +97,90 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="remotedatafilenode.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Events</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-event tsd-parent-kind-class tsd-is-static"><a href="remotedatafile.html#loading_complete" class="tsd-kind-icon">LOADING_<wbr>COMPLETE</a></li>
-								<li class="tsd-kind-event tsd-parent-kind-class tsd-is-static"><a href="remotedatafile.html#loading_progress" class="tsd-kind-icon">LOADING_<wbr>PROGRESS</a></li>
-								<li class="tsd-kind-event tsd-parent-kind-class tsd-is-static"><a href="remotedatafile.html#loading_start" class="tsd-kind-icon">LOADING_<wbr>START</a></li>
+								<li class="tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="remotedatafilenode.html#loading_complete" class="tsd-kind-icon">LOADING_<wbr>COMPLETE</a></li>
+								<li class="tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="remotedatafilenode.html#loading_progress" class="tsd-kind-icon">LOADING_<wbr>PROGRESS</a></li>
+								<li class="tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="remotedatafilenode.html#loading_start" class="tsd-kind-icon">LOADING_<wbr>START</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="remotedatafilenode.html#_bytelength" class="tsd-kind-icon">_byte<wbr>Length</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="remotedatafilenode.html#_bytesloaded" class="tsd-kind-icon">_bytes<wbr>Loaded</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="remotedatafilenode.html#_isloadingcomplete" class="tsd-kind-icon">_is<wbr>Loading<wbr>Complete</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="remotedatafilenode.html#_onloadingcomplete" class="tsd-kind-icon">_on<wbr>Loading<wbr>Complete</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="remotedatafilenode.html#buffer" class="tsd-kind-icon">buffer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="remotedatafilenode.html#source" class="tsd-kind-icon">source</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="remotedatafile.html#bytelength" class="tsd-kind-icon">byte<wbr>Length</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="remotedatafile.html#bytesloaded" class="tsd-kind-icon">bytes<wbr>Loaded</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="remotedatafile.html#isloadingcomplete" class="tsd-kind-icon">is<wbr>Loading<wbr>Complete</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="remotedatafile.html#onloadingcomplete" class="tsd-kind-icon">on<wbr>Loading<wbr>Complete</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="remotedatafile.html#omnievent" class="tsd-kind-icon">omni<wbr>Event</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="remotedatafilenode.html#bytelength" class="tsd-kind-icon">byte<wbr>Length</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="remotedatafilenode.html#bytesloaded" class="tsd-kind-icon">bytes<wbr>Loaded</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="remotedatafilenode.html#isloadingcomplete" class="tsd-kind-icon">is<wbr>Loading<wbr>Complete</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite"><a href="remotedatafilenode.html#onloadingcomplete" class="tsd-kind-icon">on<wbr>Loading<wbr>Complete</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="remotedatafilenode.html#omnievent" class="tsd-kind-icon">omni<wbr>Event</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="remotedatafile.html#emit" class="tsd-kind-icon">emit</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="remotedatafile.html#loaddata" class="tsd-kind-icon">load<wbr>Data</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="remotedatafile.html#off" class="tsd-kind-icon">off</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="remotedatafile.html#on" class="tsd-kind-icon">on</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="remotedatafile.html#slice" class="tsd-kind-icon">slice</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="remotedatafile.html#startdownloading" class="tsd-kind-icon">start<wbr>Downloading</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="remotedatafilenode.html#emit" class="tsd-kind-icon">emit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="remotedatafilenode.html#loaddata" class="tsd-kind-icon">load<wbr>Data</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="remotedatafilenode.html#off" class="tsd-kind-icon">off</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="remotedatafilenode.html#on" class="tsd-kind-icon">on</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="remotedatafilenode.html#readfilestream" class="tsd-kind-icon">read<wbr>File<wbr>Stream</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="remotedatafilenode.html#slice" class="tsd-kind-icon">slice</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="remotedatafilenode.html#startdownloading" class="tsd-kind-icon">start<wbr>Downloading</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="remotedatafilenode.html#fromsource" class="tsd-kind-icon">from<wbr>Source</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Remote<wbr>Data<wbr>File<wbr>Node<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="../globals.html#remotefilesourcenode" class="tsd-signature-type">RemoteFileSourceNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="remotedatafilenode.html" class="tsd-signature-type">RemoteDataFileNode</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:131</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>source: <a href="../globals.html#remotefilesourcenode" class="tsd-signature-type">RemoteFileSourceNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="remotedatafilenode.html" class="tsd-signature-type">RemoteDataFileNode</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Events</h2>
-				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 					<a name="loading_complete" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> LOADING_<wbr>COMPLETE</h3>
 					<div class="tsd-signature tsd-kind-icon">LOADING_<wbr>COMPLETE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> = Symbol(&#x27;DataFileEvents::LoadingComplete&#x27;)</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#loading_complete">LOADING_COMPLETE</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L22">src/file/remote/RemoteDataFile.ts:22</a></li>
 						</ul>
@@ -146,11 +191,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 					<a name="loading_progress" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> LOADING_<wbr>PROGRESS</h3>
 					<div class="tsd-signature tsd-kind-icon">LOADING_<wbr>PROGRESS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> = Symbol(&#x27;DataFileEvents::LoadingProgress&#x27;)</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#loading_progress">LOADING_PROGRESS</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L16">src/file/remote/RemoteDataFile.ts:16</a></li>
 						</ul>
@@ -161,11 +207,12 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-class tsd-is-static">
+				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 					<a name="loading_start" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> LOADING_<wbr>START</h3>
 					<div class="tsd-signature tsd-kind-icon">LOADING_<wbr>START<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> = Symbol(&#x27;DataFileEvents::LoadingStart&#x27;)</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#loading_start">LOADING_START</a></p>
 						<ul>
 							<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L10">src/file/remote/RemoteDataFile.ts:10</a></li>
 						</ul>
@@ -177,19 +224,167 @@
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_bytelength" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _byte<wbr>Length</h3>
+					<div class="tsd-signature tsd-kind-icon">_byte<wbr>Length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/file/remote/RemoteDataFileNode.ts:67</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Variable to hold the byte length of the loaded file.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_bytesloaded" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _bytes<wbr>Loaded</h3>
+					<div class="tsd-signature tsd-kind-icon">_bytes<wbr>Loaded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/file/remote/RemoteDataFileNode.ts:89</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Variable to hold the bytes loaded so far from the remote file.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_isloadingcomplete" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _is<wbr>Loading<wbr>Complete</h3>
+					<div class="tsd-signature tsd-kind-icon">_is<wbr>Loading<wbr>Complete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/file/remote/RemoteDataFileNode.ts:113</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Variable that holds a boolean describing if the loading is complete or not.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_onloadingcomplete" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _on<wbr>Loading<wbr>Complete</h3>
+					<div class="tsd-signature tsd-kind-icon">_on<wbr>Loading<wbr>Complete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>reject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>resolve<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>started<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/file/remote/RemoteDataFileNode.ts:101</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Variable that holds a promise that resolves when the file finishes loading</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>promise<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>reject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>e: <span class="tsd-signature-type">Error</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>resolve<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-variable">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>n: <span class="tsd-signature-type">number</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>started<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="buffer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> buffer</h3>
+					<div class="tsd-signature tsd-kind-icon">buffer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/file/remote/RemoteDataFileNode.ts:126</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An ArrayBuffer instance that holds the data loaded for this file, do not keep a local copy of this variable as
+							it could be replaced as the file loads into memory.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="source" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> source</h3>
+					<div class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">:</span> <a href="../globals.html#remotefilesourcenode" class="tsd-signature-type">RemoteFileSourceNode</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/file/remote/RemoteDataFileNode.ts:131</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The source from which the file should be loaded.</p>
+						</div>
+					</div>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 					<a name="bytelength" class="tsd-anchor"></a>
 					<h3>byte<wbr>Length</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> byteLength<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#bytelength">byteLength</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L27">src/file/remote/RemoteDataFile.ts:27</a></li>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:72</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -201,17 +396,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 					<a name="bytesloaded" class="tsd-anchor"></a>
 					<h3>bytes<wbr>Loaded</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> bytesLoaded<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#bytesloaded">bytesLoaded</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L32">src/file/remote/RemoteDataFile.ts:32</a></li>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:94</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -223,17 +419,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 					<a name="isloadingcomplete" class="tsd-anchor"></a>
 					<h3>is<wbr>Loading<wbr>Complete</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isLoadingComplete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#isloadingcomplete">isLoadingComplete</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L42">src/file/remote/RemoteDataFile.ts:42</a></li>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:118</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -245,17 +442,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 					<a name="onloadingcomplete" class="tsd-anchor"></a>
 					<h3>on<wbr>Loading<wbr>Complete</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> onLoadingComplete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#onloadingcomplete">onLoadingComplete</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L37">src/file/remote/RemoteDataFile.ts:37</a></li>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:106</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -332,18 +530,19 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="loaddata" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> load<wbr>Data</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<h3>load<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">load<wbr>Data<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, end<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/datasource.html">DataSource</a>.<a href="../interfaces/datasource.html#loaddata">loadData</a></p>
+								<p>Overrides <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#loaddata">loadData</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L55">src/file/remote/RemoteDataFile.ts:55</a></li>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:182</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -354,13 +553,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> start: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> start: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The offset at which the data will start loading</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> end: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> end: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = this._byteLength</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The offset at which the data will stop loading</p>
 									</div>
@@ -447,16 +646,49 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="readfilestream" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> read<wbr>File<wbr>Stream</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>File<wbr>Stream<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IncomingMessage</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:209</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Reads the data from a remote response using streams, this allows for data to be processed even if the file has
+									not been completely loaded.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <span class="tsd-signature-type">IncomingMessage</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A response object returned by <code>fetch</code>. This object will be used to retrieve the read stream.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="slice" class="tsd-anchor"></a>
 					<h3>slice</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">slice<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, end<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="datachunk.html" class="tsd-signature-type">DataChunk</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/datasource.html">DataSource</a>.<a href="../interfaces/datasource.html#slice">slice</a></p>
+								<p>Inherited from <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#slice">slice</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L62">src/file/remote/RemoteDataFile.ts:62</a></li>
 								</ul>
@@ -485,17 +717,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="startdownloading" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> start<wbr>Downloading</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<h3>start<wbr>Downloading</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">start<wbr>Downloading<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="remotedatafile.html">RemoteDataFile</a>.<a href="remotedatafile.html#startdownloading">startDownloading</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/dekkai-data/data-source/blob/3451764/src/file/remote/RemoteDataFile.ts#L48">src/file/remote/RemoteDataFile.ts:48</a></li>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:152</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -505,6 +738,38 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="fromsource" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Source</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Source<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="../globals.html#remotefilesourcenode" class="tsd-signature-type">RemoteFileSourceNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="remotedatafilenode.html" class="tsd-signature-type">RemoteDataFileNode</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/file/remote/RemoteDataFileNode.ts:58</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Utility function to wrap a file as a <a href="datafile.html">DataFile</a> for this platform.
+									NOTE: This function calls <code>startDownloading</code> on the file.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>source: <a href="../globals.html#remotefilesourcenode" class="tsd-signature-type">RemoteFileSourceNode</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The file to wrap</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="remotedatafilenode.html" class="tsd-signature-type">RemoteDataFileNode</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -538,63 +803,90 @@
 					<li class=" tsd-kind-class">
 						<a href="localdatafilenode.html" class="tsd-kind-icon">Local<wbr>Data<wbr>File<wbr>Node</a>
 					</li>
+					<li class=" tsd-kind-class">
+						<a href="remotedatafile.html" class="tsd-kind-icon">Remote<wbr>Data<wbr>File</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="remotedatafilebrowser.html" class="tsd-kind-icon">Remote<wbr>Data<wbr>File<wbr>Browser</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="remotedatafile.html" class="tsd-kind-icon">Remote<wbr>Data<wbr>File</a>
+						<a href="remotedatafilenode.html" class="tsd-kind-icon">Remote<wbr>Data<wbr>File<wbr>Node</a>
 						<ul>
-							<li class=" tsd-kind-event tsd-parent-kind-class tsd-is-static">
-								<a href="remotedatafile.html#loading_complete" class="tsd-kind-icon">LOADING_<wbr>COMPLETE</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="remotedatafilenode.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-event tsd-parent-kind-class tsd-is-static">
-								<a href="remotedatafile.html#loading_progress" class="tsd-kind-icon">LOADING_<wbr>PROGRESS</a>
+							<li class=" tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="remotedatafilenode.html#loading_complete" class="tsd-kind-icon">LOADING_<wbr>COMPLETE</a>
 							</li>
-							<li class=" tsd-kind-event tsd-parent-kind-class tsd-is-static">
-								<a href="remotedatafile.html#loading_start" class="tsd-kind-icon">LOADING_<wbr>START</a>
+							<li class=" tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="remotedatafilenode.html#loading_progress" class="tsd-kind-icon">LOADING_<wbr>PROGRESS</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="remotedatafile.html#bytelength" class="tsd-kind-icon">byte<wbr>Length</a>
+							<li class=" tsd-kind-event tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="remotedatafilenode.html#loading_start" class="tsd-kind-icon">LOADING_<wbr>START</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="remotedatafile.html#bytesloaded" class="tsd-kind-icon">bytes<wbr>Loaded</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="remotedatafilenode.html#_bytelength" class="tsd-kind-icon">_byte<wbr>Length</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="remotedatafile.html#isloadingcomplete" class="tsd-kind-icon">is<wbr>Loading<wbr>Complete</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="remotedatafilenode.html#_bytesloaded" class="tsd-kind-icon">_bytes<wbr>Loaded</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="remotedatafile.html#onloadingcomplete" class="tsd-kind-icon">on<wbr>Loading<wbr>Complete</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="remotedatafilenode.html#_isloadingcomplete" class="tsd-kind-icon">_is<wbr>Loading<wbr>Complete</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="remotedatafilenode.html#_onloadingcomplete" class="tsd-kind-icon">_on<wbr>Loading<wbr>Complete</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="remotedatafilenode.html#buffer" class="tsd-kind-icon">buffer</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="remotedatafilenode.html#source" class="tsd-kind-icon">source</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
+								<a href="remotedatafilenode.html#bytelength" class="tsd-kind-icon">byte<wbr>Length</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
+								<a href="remotedatafilenode.html#bytesloaded" class="tsd-kind-icon">bytes<wbr>Loaded</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
+								<a href="remotedatafilenode.html#isloadingcomplete" class="tsd-kind-icon">is<wbr>Loading<wbr>Complete</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-overwrite">
+								<a href="remotedatafilenode.html#onloadingcomplete" class="tsd-kind-icon">on<wbr>Loading<wbr>Complete</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="remotedatafile.html#omnievent" class="tsd-kind-icon">omni<wbr>Event</a>
+								<a href="remotedatafilenode.html#omnievent" class="tsd-kind-icon">omni<wbr>Event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="remotedatafile.html#emit" class="tsd-kind-icon">emit</a>
+								<a href="remotedatafilenode.html#emit" class="tsd-kind-icon">emit</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="remotedatafile.html#loaddata" class="tsd-kind-icon">load<wbr>Data</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="remotedatafile.html#off" class="tsd-kind-icon">off</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="remotedatafilenode.html#loaddata" class="tsd-kind-icon">load<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="remotedatafile.html#on" class="tsd-kind-icon">on</a>
+								<a href="remotedatafilenode.html#off" class="tsd-kind-icon">off</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="remotedatafile.html#slice" class="tsd-kind-icon">slice</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="remotedatafilenode.html#on" class="tsd-kind-icon">on</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="remotedatafile.html#startdownloading" class="tsd-kind-icon">start<wbr>Downloading</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="remotedatafilenode.html#readfilestream" class="tsd-kind-icon">read<wbr>File<wbr>Stream</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="remotedatafilenode.html#slice" class="tsd-kind-icon">slice</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="remotedatafilenode.html#startdownloading" class="tsd-kind-icon">start<wbr>Downloading</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="remotedatafilenode.html#fromsource" class="tsd-kind-icon">from<wbr>Source</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="remotedatafilebrowser.html" class="tsd-kind-icon">Remote<wbr>Data<wbr>File<wbr>Browser</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="remotedatafilenode.html" class="tsd-kind-icon">Remote<wbr>Data<wbr>File<wbr>Node</a>
-					</li>
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/datasource.html" class="tsd-kind-icon">Data<wbr>Source</a>
 					</li>
