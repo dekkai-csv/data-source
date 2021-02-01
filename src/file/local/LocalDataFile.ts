@@ -12,7 +12,7 @@ export abstract class LocalDataFile implements DataSource {
      * @param start - The offset at which the data will start loading
      * @param end - The offset at which the data will stop loading
      */
-    public abstract async loadData(start?: number, end?: number): Promise<ArrayBuffer>;
+    public abstract loadData(start?: number, end?: number): Promise<ArrayBuffer>;
 
     /**
      * Closes the local file handle for the current platform. After this function is called all subsequent operations
