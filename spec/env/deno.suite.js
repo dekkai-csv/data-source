@@ -1,23 +1,7 @@
-import '../../node_modules/mocha/mocha.js';
 import '../../node_modules/chai/chai.js';
 
 import specDataFile from '../DataFile.spec.js';
 import specDataChunk from '../DataChunk.spec.js';
-
-// setup mocha
-mocha.setup({ui: 'bdd', reporter: 'spec'});
-mocha.checkLeaks();
-
-function onCompleted(failures) {
-    if (failures > 0) {
-        Deno.exit(1);
-    } else {
-        Deno.exit(0);
-    }
-}
-
-// Browser based Mocha requires `window.location` to exist.
-window.location = new URL('http://localhost:0');
 
 // create the environment
 function noOpPromise(result) {
@@ -50,7 +34,16 @@ function getTestFilePackage() {
     }
 }
 
+const names = [];
+
+const test = {
+    describe: async (n, fn) => { names.push(n); fn(); names.pop(); },
+    it: async (n, fn) => await Deno.test({ name: `${names.join('::')}::${n}`, fn, sanitizeOps: false, sanitizeResources: false }),
+    before: async fn => await fn(),
+};
+
 const env = {
+    test,
     chai,
     getTestFilePackage,
 };
@@ -58,7 +51,3 @@ const env = {
 // register tests
 await specDataFile(env);
 await specDataChunk(env);
-
-// run tests
-mocha.color(true);
-mocha.run(onCompleted).globals(['onerror']);

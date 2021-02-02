@@ -2,6 +2,7 @@ import {DataFile, LocalDataFile, DataChunk, RemoteDataFile} from '../build/dist/
 
 function run(env) {
     const {
+        test,
         chai,
         getTestFilePackage,
     } = env;
@@ -11,9 +12,9 @@ function run(env) {
     function basicFileTests(target) {
         const space = filePackage[target];
         for (let i = 0, n = space.length; i < n; ++i) {
-            describe(`From ${space[i].type}`, function() {
+            test.describe(`From ${space[i].type}`, function() {
                 let dataFile;
-                it('can be instantiated', async function() {
+                test.it('can be instantiated', async function() {
                     const source = await space[i].source;
                     if (target === 'local') {
                         dataFile = await DataFile.fromLocalSource(source);
@@ -24,22 +25,22 @@ function run(env) {
                     }
                 });
 
-                it('reports the correct size', async function() {
+                test.it('reports the correct size', async function() {
                     chai.expect(await dataFile.byteLength).to.equal((await filePackage.info).size);
                 });
 
-                it('can slice a DataChunk of the file', async function () {
+                test.it('can slice a DataChunk of the file', async function () {
                     const chunk = dataFile.slice(0, Math.floor((await filePackage.info).size / 2));
                     chai.expect(chunk instanceof DataChunk).to.equal(true);
                 });
 
-                it('loads the whole file on demand', async function() {
+                test.it('loads the whole file on demand', async function() {
                     const buffer = await dataFile.loadData();
                     const uint8 = new Uint8Array(buffer);
                     chai.expect(uint8).to.eql(await filePackage.buffer);
                 });
 
-                it('loads an arbitrary area of the file on demand', async function() {
+                test.it('loads an arbitrary area of the file on demand', async function() {
                     const start = Math.floor((await filePackage.info).size / 3);
                     const end = start * 2;
                     const buffer = await dataFile.loadData(start, end);
@@ -48,7 +49,7 @@ function run(env) {
                     chai.expect(uint8).to.eql(subarray);
                 });
 
-                it('loads up to the max file size', async function () {
+                test.it('loads up to the max file size', async function () {
                     const sizeOf1GB = 1024 * 1024 * 1024;
                     const data = await dataFile.loadData(0, sizeOf1GB);
                     chai.expect(data.byteLength).to.be.lessThan(sizeOf1GB);
@@ -56,7 +57,7 @@ function run(env) {
                 });
 
                 if (target === 'local') {
-                    it('invalidates the file when `close` is called', async function () {
+                    test.it('invalidates the file when `close` is called', async function () {
                         let failed = false;
                         dataFile.close();
                         try {
@@ -71,17 +72,17 @@ function run(env) {
         }
     }
 
-    describe('DataFile', function () {
-        describe('LocalDataFile', function() {
+    test.describe('DataFile', function () {
+        test.describe('LocalDataFile', function() {
             basicFileTests('local');
         });
 
-        describe('RemoteDataFile', function() {
+        test.describe('RemoteDataFile', function() {
             basicFileTests('remote');
 
             const baseURL = `${filePackage.remoteBaseURL}/synthetic`;
-            describe('Synthetic tests', function () {
-                it('handles files with no size header', function() {
+            test.describe('Synthetic tests', function () {
+                test.it('handles files with no size header', function() {
                     // this.timeout(10000);
                     return new Promise(async (resolve, reject) => {
                         try {
@@ -103,7 +104,7 @@ function run(env) {
                     });
                 });
 
-                it('emits loading events', function() {
+                test.it('emits loading events', function() {
                     // this.timeout(10000);
                     return new Promise(async (resolve, reject) => {
                         let started = false;
@@ -133,7 +134,7 @@ function run(env) {
                     });
                 });
 
-                it('exposes a loading complete promise', function() {
+                test.it('exposes a loading complete promise', function() {
                     // this.timeout(10000);
                     return new Promise(async (resolve, reject) => {
                         try {
@@ -151,7 +152,7 @@ function run(env) {
                     });
                 });
 
-                it('slices the file as it is being loaded', function() {
+                test.it('slices the file as it is being loaded', function() {
                     // this.timeout(10000);
                     return new Promise(async (resolve, reject) => {
                         try {
@@ -167,7 +168,7 @@ function run(env) {
                     });
                 });
 
-                it('loads up to the max file size while loading', function () {
+                test.it('loads up to the max file size while loading', function () {
                     // this.timeout(10000);
                     return new Promise(async (resolve, reject) => {
                         try {
@@ -184,7 +185,7 @@ function run(env) {
                     });
                 });
 
-                it('loads up to the max file size while loading and size unknown', function () {
+                test.it('loads up to the max file size while loading and size unknown', function () {
                     // this.timeout(10000);
                     return new Promise(async (resolve, reject) => {
                         try {

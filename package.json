@@ -32,7 +32,7 @@
         "test:run": "run-s -c test:run:**",
         "test:run:node": "mocha spec/env/node.suite.js",
         "test:run:browser": "karma start --single-run --browsers ChromeHeadless karma.conf.cjs",
-        "test:run:deno": "deno run --allow-read --allow-net spec/env/deno.suite.js",
+        "test:run:deno": "deno test spec/env/deno.suite.js --allow-env --allow-read --allow-net --location http://localhost:0",
         "test:teardown": "pm2 stop ./spec/env/TestFileServer.mjs",
         "lint": "eslint --config ./.eslintrc.cjs \"./{src,spec}/**/*.{js,ts}\"",
         "prepack": "run-s clean test lint",

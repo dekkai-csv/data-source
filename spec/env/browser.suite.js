@@ -63,6 +63,7 @@ function getTestFilePackage() {
 }
 
 const env = {
+    test: window,
     chai,
     getTestFilePackage,
 };

@@ -41,6 +41,7 @@ function getTestFilePackage() {
 }
 
 const env = {
+    test: global,
     chai,
     getTestFilePackage,
 };
