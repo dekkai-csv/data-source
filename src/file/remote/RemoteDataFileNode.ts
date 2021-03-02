@@ -1,5 +1,5 @@
-import {isNodeJS} from '@dekkai/env/build/lib/node';
-import {loadModule} from '@dekkai/env/build/lib/moduleLoader';
+import {isNodeJS} from '@dekkai/env/build/lib/node.js';
+import {loadModule} from '@dekkai/env/build/lib/moduleLoader.js';
 import {RemoteDataFile} from './RemoteDataFile';
 import {RemoteFileSourceNode} from '../types';
 import {IncomingMessage} from 'http';

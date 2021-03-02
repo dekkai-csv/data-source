@@ -1,6 +1,6 @@
 import {LocalDataFile} from './LocalDataFile';
-import {loadModule} from '@dekkai/env/build/lib/moduleLoader';
-import {isNodeJS} from '@dekkai/env/build/lib/node';
+import {loadModule} from '@dekkai/env/build/lib/moduleLoader.js';
+import {isNodeJS} from '@dekkai/env/build/lib/node.js';
 import {LocalFileSourceNode} from '../types';
 import {Stats as FSStats} from 'fs';
 

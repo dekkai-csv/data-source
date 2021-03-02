@@ -1,5 +1,5 @@
-import {isNodeJS} from '@dekkai/env/build/lib/node';
-import {isDeno} from '@dekkai/env/build/lib/deno';
+import {isNodeJS} from '@dekkai/env/build/lib/node.js';
+import {isDeno} from '@dekkai/env/build/lib/deno.js';
 import {LocalDataFileNode} from './local/LocalDataFileNode';
 import {LocalDataFileDeno} from './local/LocalDataFileDeno';
 import {LocalDataFileBrowser} from './local/LocalDataFileBrowser';

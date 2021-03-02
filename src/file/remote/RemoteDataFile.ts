@@ -1,6 +1,6 @@
 import {DataChunk} from '../../chunk/DataChunk';
 import {DataSource} from '../../types';
-import {EventEmitter} from '@dekkai/event-emitter/build/lib/mod';
+import {EventEmitter} from '@dekkai/event-emitter';
 
 export abstract class RemoteDataFile extends EventEmitter implements DataSource {
     /**
